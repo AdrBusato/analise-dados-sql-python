@@ -1,0 +1,14 @@
+-- Listar todas as transações adicionando uma nova coluna sinalizando "baixo", 
+--"médio" e "alto" para o valor dos pontos [<10; <500; >=500]
+
+SELECT IdTransacao,
+        QtdePontos,
+    CASE 
+        WHEN QtdePontos < 10 THEN 'baixo'
+        WHEN QtdePontos < 500 THEN 'médio'
+        ELSE 'alto'
+    END AS flQtdePontos
+
+FROM transacoes
+
+ORDER BY QtdePontos DESC;

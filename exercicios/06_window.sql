@@ -1,0 +1,20 @@
+-- Quantidade de usuários cadastrados (abosluto e acumulado) ao longo do tempo?
+
+WITH tb_dia_cliente AS (
+    SELECT
+        substr(DtCriacao,1,10) AS dtDia,
+        count(DISTINCT IdCliente) AS qtdeCliente
+    FROM clientes
+    GROUP BY dtDia
+),
+
+tb_acum AS (
+    SELECT
+        *,
+        sum(qtdeCliente) OVER (ORDER BY dtDia) AS qtdClienteAcum
+    FROM tb_dia_cliente
+)
+
+SELECT *
+FROM tb_acum
+ORDER BY dtDia
