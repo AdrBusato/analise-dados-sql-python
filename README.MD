@@ -17,6 +17,16 @@ Praticar e consolidar conceitos de SQL aplicados à análise de dados, incluindo
 
 ---
 
+## 📚 Referência
+
+Este projeto foi desenvolvido com base nos estudos realizados no curso de SQL do canal Téo Me Why no YouTube.
+
+https://www.youtube.com/@teomewhy
+
+O objetivo foi aplicar na prática os conceitos aprendidos e consolidar conhecimentos em análise de dados.
+
+---
+
 ## 🛠️ Tecnologias
 
 * SQL (SQLite)
